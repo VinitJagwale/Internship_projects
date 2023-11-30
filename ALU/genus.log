@@ -1,0 +1,1761 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 17.22-s017_1, built Sun Apr 01 2018
+Options: 
+Date:    Fri Nov 24 15:38:02 2023
+Host:    EKL-DT-36 (x86_64 w/Linux 2.6.32-573.el6.x86_64) (2cores*2cpus*1physical cpu*Intel(R) Core(TM)2 Duo CPU E7500 @ 2.93GHz 3072KB) (3791808KB)
+OS:      Red Hat Enterprise Linux Server release 6.7 (Santiago)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+
+Finished loading tool scripts (13 seconds elapsed).
+
+WARNING: This version of the tool is 2063 days old.
+@genus:root: 1> read_libs lib/slow.lib
+
+Threads Configured:2
+
+  Message Summary for Library slow.lib:
+  *************************************
+  Could not find an attribute in the library. [LBR-436]: 569
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  Missing library level attribute. [LBR-516]: 1
+  *************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.080000, 125.000000) in library 'slow.lib'.
+        : The nominal operating condition represents either the nominal PVT values if specified in the library source, or the default PVT values (1.0, 1.0, 1.0).
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/ADDFHX2'.
+        : Specify a valid area value for the libcell.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/ADDFHX4'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/ADDFHXL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/ADDFXL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/ADDHX2'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/ADDHXL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AND2X4'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AND2X6'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AND2XL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AND3X1'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AND3X8'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AND3XL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AND4X1'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AND4X4'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AND4X8'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AND4XL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AO21X1'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AO21X2'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AO21XL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'gpdk045bc/AO22X1'.
+@genus:root: 2> read_hdl ALU_32Bit.v
+@genus:root: 3> elaborate
+  Library has 291 usable logic and 126 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'alu' from file 'ALU_32Bit.v'.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'en' in module 'alu' in file 'ALU_32Bit.v' on line 6.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'in1' in module 'alu' in file 'ALU_32Bit.v' on line 6.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'in2' in module 'alu' in file 'ALU_32Bit.v' on line 6.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'alu'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+UM:  flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:            25            197                                      elaborate
+design:alu
+@genus:root: 4> write_hdl > elaborate_file.v
+@genus:root: 5> gui_show
+@genus:root: 6> syn_gen
+Info    : Synthesizing. [SYNTH-1]
+        : Synthesizing 'alu' to generic gates using 'medium' effort.
+  Setting attribute of design 'alu': 'is_excp_dupcln' = false
+PBS_Generic-Start - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Generic-Start' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:30(00:04:46) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:42:57 (Nov24) |  312.7 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+Info    : Partition Based Synthesis execution skipped. [PHYS-752]
+        : Design size is less than the partition size '100000' for distributed generic optimization to kick in.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 31 sequential instances.
+        : Optimizations such as constant propagation or redundancy removal could change the connections so a hierarchical instance does not drive any primary outputs anymore. To see the list of deleted hierarchical instances, set the 'information_level' attribute to 2 or above. If the message is truncated set the message attribute 'truncate' to false to see the complete list. To prevent this optimization, set the 'delete_unloaded_insts' root/subdesign attribute to 'false' or 'preserve' instance attribute to 'true'.
+Info    : Pre-processed datapath logic. [DPOPT-6]
+        : No pre-processing optimizations applied to datapath logic in 'alu'.
+Info    : Optimizing datapath logic. [DPOPT-1]
+        : Optimizing datapath logic in 'alu'.
+Info    : Implementing datapath configurations. [DPOPT-3]
+        : Implementing datapath configurations for 'CDN_DP_region'
+Info    : Done implementing datapath configurations. [DPOPT-4]
+        : Selected 'very_fast' configuration 4 for module 'CDN_DP_region'.
+          Optimizations applied to 'very_fast' configuration:
+            rewriting(0), factoring(0), sharing(0), cmultcse(0), downsizing(0), speculation(0)
+Info    : Done optimizing datapath logic. [DPOPT-2]
+        : Done optimizing datapath logic in 'alu'.
+Warning : Not obtained requested number of super thread servers. [ST-136]
+        : The tool is running on a 2 cpu machine.
+        : The requested number of cpus are not available on machine.
+Info    : Attempting to launch a super-threading server. [ST-120]
+        : Attempting to Launch server 1 of 2.
+        : The tool is entering super-threading mode and is launching a CPU server process.  This is enabled by the root attribute 'super_thread_servers' or 'auto_super_thread'.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server 'localhost_1_0' is process '20927' on this host.
+        : The tool is entering super-threading mode and has established a connection with a CPU server process.  This is enabled by the root attributes 'super_thread_servers' or 'auto_super_thread'.
+                  Library loading done successfully on server 'localhost_1_0'.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server 'localhost_1_1' is forked process '21077' on this host.
+        Distributing super-thread jobs: alu
+          Sending 'alu' to server 'localhost_1_0'...
+            Sent 'alu' to server 'localhost_1_0'.
+          Received 'alu' from server 'localhost_1_0'. (697 ms elapsed)
+
++-----------+-----------------------+-----+----------------------+---------------------------+
+|   Host    |        Machine        | CPU | Physical Memory (MB) | Peak Physical Memory (MB) |
++-----------+-----------------------+-----+----------------------+---------------------------+
+| localhost | localhost.localdomain |  2  |        559.1         |           559.1           |
++-----------+-----------------------+-----+----------------------+---------------------------+
+
++---------------+----------------------+---------------------------+
+|    Server     | Physical Memory (MB) | Peak Physical Memory (MB) |
++---------------+----------------------+---------------------------+
+| localhost_1_1 |        100.4         |           100.4           |
+| localhost_1_0 |        223.1         |           223.1           |
++---------------+----------------------+---------------------------+
+Mapper: Libraries have:
+	domain _default_: 291 combo usable cells and 126 sequential usable cells
+Updating ST server settings
+Info    : Connection established with super-threading server. [ST-110]
+        : The server 'localhost_1_2' is forked process '21087' on this host.
+Multi-threaded constant propagation [1|0] ...
+Multi-threaded Virtual Mapping    (2 threads per ST process, 2 of 2 CPUs usable)
+        Distributing super-thread jobs: remainder_unsigned_624 divide_unsigned_1459 mult_unsigned_849
+          Sending 'remainder_unsigned_624' to server 'localhost_1_0'...
+            Sent 'remainder_unsigned_624' to server 'localhost_1_0'.
+          Sending 'divide_unsigned_1459' to server 'localhost_1_2'...
+            Sent 'divide_unsigned_1459' to server 'localhost_1_2'.
+          Received 'divide_unsigned_1459' from server 'localhost_1_2'. (167364 ms elapsed)
+          Sending 'mult_unsigned_849' to server 'localhost_1_2'...
+            Sent 'mult_unsigned_849' to server 'localhost_1_2'.
+          Received 'mult_unsigned_849' from server 'localhost_1_2'. (6136 ms elapsed)
+          Received 'remainder_unsigned_624' from server 'localhost_1_0'. (217441 ms elapsed)
+        Distributing super-thread jobs: mux_ctl_0x
+          Sending 'mux_ctl_0x' to server 'localhost_1_0'...
+            Sent 'mux_ctl_0x' to server 'localhost_1_0'.
+          Received 'mux_ctl_0x' from server 'localhost_1_0'. (4129 ms elapsed)
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack: Unconstrained
+
+
++-----------+-----------------------+-----+----------------------+---------------------------+
+|   Host    |        Machine        | CPU | Physical Memory (MB) | Peak Physical Memory (MB) |
++-----------+-----------------------+-----+----------------------+---------------------------+
+| localhost | localhost.localdomain |  2  |        708.3         |           974.7           |
++-----------+-----------------------+-----+----------------------+---------------------------+
+
++---------------+----------------------+---------------------------+
+|    Server     | Physical Memory (MB) | Peak Physical Memory (MB) |
++---------------+----------------------+---------------------------+
+| localhost_1_2 |        136.4         |           136.4           |
+| localhost_1_0 |        286.2         |           484.7           |
++---------------+----------------------+---------------------------+
+
++-----------+-----------------------+-----+----------------------+---------------------------+
+|   Host    |        Machine        | CPU | Physical Memory (MB) | Peak Physical Memory (MB) |
++-----------+-----------------------+-----+----------------------+---------------------------+
+| localhost | localhost.localdomain |  1  |        708.3         |           974.7           |
++-----------+-----------------------+-----+----------------------+---------------------------+
+
++---------------+----------------------+---------------------------+
+|    Server     | Physical Memory (MB) | Peak Physical Memory (MB) |
++---------------+----------------------+---------------------------+
+| localhost_1_0 |        286.2         |           484.7           |
++---------------+----------------------+---------------------------+
+Info    : Using '2' number of super-threading servers using the attribute 'super_thread_servers' could have
+          saved '173' more seconds during global map.
+PBS_Generic_Opt-Post - Elapsed_Time 539, CPU_Time 532.3095860000001
+stamp 'PBS_Generic_Opt-Post' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:30(00:04:46) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:42:57 (Nov24) |  312.7 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:22(00:13:45) |  00:08:52(00:08:59) | 100.0(100.0) |   15:51:56 (Nov24) |  708.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_Generic-Postgen HBO Optimizations - Elapsed_Time 1, CPU_Time 1.0
+stamp 'PBS_Generic-Postgen HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:30(00:04:46) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:42:57 (Nov24) |  312.7 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:22(00:13:45) |  00:08:52(00:08:59) |  99.8( 99.8) |   15:51:56 (Nov24) |  708.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:23(00:13:46) |  00:00:01(00:00:01) |   0.2(  0.2) |   15:51:57 (Nov24) |  708.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+##>=================== Cadence Confidential (Generic-Logical) ===================
+##>Main Thread Summary:
+##>----------------------------------------------------------------------------------------
+##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
+##>----------------------------------------------------------------------------------------
+##>G:Initial                            1         -         -     46482         0       312
+##>G:Setup                              0         -         -         -         -         -
+##>G:Launch ST                          0         -         -         -         -         -
+##>G:Design Partition                   0         -         -         -         -         -
+##>G:Create Partition Netlists          0         -         -         -         -         -
+##>G:Init Power                         0         -         -         -         -         -
+##>G:Budgeting                          0         -         -         -         -         -
+##>G:Derenv-DB                          0         -         -         -         -         -
+##>G:Debug Outputs                      0         -         -         -         -         -
+##>G:ST loading                         0         -         -         -         -         -
+##>G:Distributed                        0         -         -         -         -         -
+##>G:Timer                              0         -         -         -         -         -
+##>G:Assembly                           0         -         -         -         -         -
+##>G:DFT                                0         -         -         -         -         -
+##>G:Const Prop                         1         -         -     38075         0       708
+##>G:Misc                             539
+##>----------------------------------------------------------------------------------------
+##>Total Elapsed                      541
+##>========================================================================================
+Info    : Done synthesizing. [SYNTH-2]
+        : Done synthesizing 'alu' to generic gates.
+     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:           714            644                                      syn_generic
+@genus:root: 7> syn_map
+Info    : Mapping. [SYNTH-4]
+        : Mapping 'alu' using 'high' effort.
+Mapper: Libraries have:
+	domain _default_: 291 combo usable cells and 126 sequential usable cells
+PBS_TechMap-Start - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_TechMap-Start' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:30(00:04:46) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:42:57 (Nov24) |  312.7 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:22(00:13:45) |  00:08:52(00:08:59) |  98.7( 90.0) |   15:51:56 (Nov24) |  708.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:23(00:13:46) |  00:00:01(00:00:01) |   0.2(  0.2) |   15:51:57 (Nov24) |  708.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:29(00:14:45) |  00:00:06(00:00:59) |   1.1(  9.8) |   15:52:56 (Nov24) |  603.0 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_TechMap-Premap HBO Optimizations - Elapsed_Time 1, CPU_Time 1.0
+stamp 'PBS_TechMap-Premap HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:30(00:04:46) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:42:57 (Nov24) |  312.7 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:22(00:13:45) |  00:08:52(00:08:59) |  98.5( 89.8) |   15:51:56 (Nov24) |  708.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:23(00:13:46) |  00:00:01(00:00:01) |   0.2(  0.2) |   15:51:57 (Nov24) |  708.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:29(00:14:45) |  00:00:06(00:00:59) |   1.1(  9.8) |   15:52:56 (Nov24) |  603.0 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:30(00:14:46) |  00:00:01(00:00:01) |   0.2(  0.2) |   15:52:57 (Nov24) |  603.0 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+Info    : Partition Based Synthesis execution skipped. [PHYS-752]
+        : Design size is less than the partition size '100000' for distributed mapping optimization to kick in.
+Mapper: Libraries have:
+	domain _default_: 291 combo usable cells and 126 sequential usable cells
+Updating ST server settings
+Info    : Connection established with super-threading server. [ST-110]
+        : The server 'localhost_1_3' is forked process '21228' on this host.
+Multi-threaded Virtual Mapping    (2 threads per ST process, 2 of 2 CPUs usable)
+        Distributing super-thread jobs: remainder_unsigned_624 divide_unsigned_1459 mult_unsigned_849 increment_unsigned_1
+          Sending 'remainder_unsigned_624' to server 'localhost_1_0'...
+            Sent 'remainder_unsigned_624' to server 'localhost_1_0'.
+          Sending 'divide_unsigned_1459' to server 'localhost_1_3'...
+            Sent 'divide_unsigned_1459' to server 'localhost_1_3'.
+          Received 'divide_unsigned_1459' from server 'localhost_1_3'. (222610 ms elapsed)
+          Sending 'mult_unsigned_849' to server 'localhost_1_3'...
+            Sent 'mult_unsigned_849' to server 'localhost_1_3'.
+          Received 'mult_unsigned_849' from server 'localhost_1_3'. (3051 ms elapsed)
+          Sending 'increment_unsigned_1' to server 'localhost_1_3'...
+            Sent 'increment_unsigned_1' to server 'localhost_1_3'.
+          Received 'increment_unsigned_1' from server 'localhost_1_3'. (182 ms elapsed)
+          Received 'remainder_unsigned_624' from server 'localhost_1_0'. (227306 ms elapsed)
+        Distributing super-thread jobs: mux_ctl_0x
+          Sending 'mux_ctl_0x' to server 'localhost_1_0'...
+            Sent 'mux_ctl_0x' to server 'localhost_1_0'.
+          Received 'mux_ctl_0x' from server 'localhost_1_0'. (4060 ms elapsed)
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack: Unconstrained
+
+Multi-threaded Technology Mapping (2 threads per ST process, 2 of 2 CPUs usable)
+        Distributing super-thread jobs: mux_ctl_0x
+          Sending 'mux_ctl_0x' to server 'localhost_1_0'...
+            Sent 'mux_ctl_0x' to server 'localhost_1_0'.
+          Received 'mux_ctl_0x' from server 'localhost_1_0'. (4575 ms elapsed)
+        Distributing super-thread jobs: remainder_unsigned_624 remainder_unsigned_624_1468 divide_unsigned_1459 divide_unsigned_1459_1467 mult_unsigned_849 increment_unsigned_1 increment_unsigned_1_1469
+          Sending 'remainder_unsigned_624' to server 'localhost_1_0'...
+            Sent 'remainder_unsigned_624' to server 'localhost_1_0'.
+          Sending 'remainder_unsigned_624_1468' to server 'localhost_1_3'...
+            Sent 'remainder_unsigned_624_1468' to server 'localhost_1_3'.
+          Received 'remainder_unsigned_624' from server 'localhost_1_0'. (25146 ms elapsed)
+          Sending 'divide_unsigned_1459' to server 'localhost_1_0'...
+            Sent 'divide_unsigned_1459' to server 'localhost_1_0'.
+          Received 'remainder_unsigned_624_1468' from server 'localhost_1_3'. (25335 ms elapsed)
+          Sending 'divide_unsigned_1459_1467' to server 'localhost_1_3'...
+            Sent 'divide_unsigned_1459_1467' to server 'localhost_1_3'.
+          Received 'divide_unsigned_1459' from server 'localhost_1_0'. (27475 ms elapsed)
+          Sending 'mult_unsigned_849' to server 'localhost_1_0'...
+            Sent 'mult_unsigned_849' to server 'localhost_1_0'.
+          Received 'divide_unsigned_1459_1467' from server 'localhost_1_3'. (27336 ms elapsed)
+          Sending 'increment_unsigned_1' to server 'localhost_1_3'...
+            Sent 'increment_unsigned_1' to server 'localhost_1_3'.
+          Received 'increment_unsigned_1' from server 'localhost_1_3'. (414 ms elapsed)
+          Sending 'increment_unsigned_1_1469' to server 'localhost_1_3'...
+            Sent 'increment_unsigned_1_1469' to server 'localhost_1_3'.
+          Received 'increment_unsigned_1_1469' from server 'localhost_1_3'. (455 ms elapsed)
+          Received 'mult_unsigned_849' from server 'localhost_1_0'. (7638 ms elapsed)
+ 
+Global mapping status
+=====================
+                                    Worst 
+                           Total  Weighted
+Operation                   Area  Neg Slk Worst Path
+-------------------------------------------------------------------------------
+ global_map                    0        0  N/A
+
+    Cost Group            Target    Slack    Diff.  Constr.
+-----------------------------------------------------------
+       default          unconst. unconst.              N.A. 
+
+ 
+Global incremental target info
+==============================
+Cost Group 'default' target slack: Unconstrained
+
+              Distributing super-thread jobs: mux_ctl_0x
+                Sending 'mux_ctl_0x' to server 'localhost_1_0'...
+                  Sent 'mux_ctl_0x' to server 'localhost_1_0'.
+                Received 'mux_ctl_0x' from server 'localhost_1_0'. (683 ms elapsed)
+              Distributing super-thread jobs: divide_unsigned_1459 divide_unsigned_1459_1467 remainder_unsigned_624 remainder_unsigned_624_1468 mult_unsigned_849
+                Sending 'divide_unsigned_1459' to server 'localhost_1_0'...
+                  Sent 'divide_unsigned_1459' to server 'localhost_1_0'.
+                Sending 'divide_unsigned_1459_1467' to server 'localhost_1_3'...
+                  Sent 'divide_unsigned_1459_1467' to server 'localhost_1_3'.
+                Received 'divide_unsigned_1459' from server 'localhost_1_0'. (1034 ms elapsed)
+                Sending 'remainder_unsigned_624' to server 'localhost_1_0'...
+                  Sent 'remainder_unsigned_624' to server 'localhost_1_0'.
+                Received 'divide_unsigned_1459_1467' from server 'localhost_1_3'. (1245 ms elapsed)
+                Sending 'remainder_unsigned_624_1468' to server 'localhost_1_3'...
+                  Sent 'remainder_unsigned_624_1468' to server 'localhost_1_3'.
+                Received 'remainder_unsigned_624' from server 'localhost_1_0'. (960 ms elapsed)
+                Sending 'mult_unsigned_849' to server 'localhost_1_0'...
+                  Sent 'mult_unsigned_849' to server 'localhost_1_0'.
+                Received 'remainder_unsigned_624_1468' from server 'localhost_1_3'. (959 ms elapsed)
+                Received 'mult_unsigned_849' from server 'localhost_1_0'. (655 ms elapsed)
+ 
+Global incremental optimization status
+======================================
+                                    Worst 
+                           Total  Weighted
+Operation                   Area  Neg Slk Worst Path
+-------------------------------------------------------------------------------
+ global_incr                   0        0  N/A
+
+    Cost Group            Target    Slack    Diff.  Constr.
+-----------------------------------------------------------
+       default          unconst. unconst.              N.A. 
+
+
++-----------+-----------------------+-----+----------------------+---------------------------+
+|   Host    |        Machine        | CPU | Physical Memory (MB) | Peak Physical Memory (MB) |
++-----------+-----------------------+-----+----------------------+---------------------------+
+| localhost | localhost.localdomain |  2  |        684.7         |          1112.6           |
++-----------+-----------------------+-----+----------------------+---------------------------+
+
++---------------+----------------------+---------------------------+
+|    Server     | Physical Memory (MB) | Peak Physical Memory (MB) |
++---------------+----------------------+---------------------------+
+| localhost_1_3 |        155.4         |           155.4           |
+| localhost_1_0 |        329.7         |           484.7           |
++---------------+----------------------+---------------------------+
+PBS_Techmap-Global Mapping - Elapsed_Time 367, CPU_Time 404.53900899999985
+stamp 'PBS_Techmap-Global Mapping' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:30(00:04:46) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:42:57 (Nov24) |  312.7 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:22(00:13:45) |  00:08:52(00:08:59) |  56.3( 55.7) |   15:51:56 (Nov24) |  708.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:23(00:13:46) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:51:57 (Nov24) |  708.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:29(00:14:45) |  00:00:06(00:00:59) |   0.6(  6.1) |   15:52:56 (Nov24) |  603.0 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:30(00:14:46) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:52:57 (Nov24) |  603.0 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:14(00:20:53) |  00:06:44(00:06:07) |  42.8( 38.0) |   15:59:04 (Nov24) |  651.2 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+Info    : Wrote formal verification information. [CFM-5]
+        : Wrote 'fv/alu/fv_map.fv.json' for netlist 'fv/alu/fv_map.v.gz'.
+Info    : Wrote dofile. [CFM-1]
+        : Dofile is 'fv/alu/rtl_to_fv_map.do'.
+PBS_TechMap-Datapath Postmap Operations - Elapsed_Time 2, CPU_Time 2.0
+stamp 'PBS_TechMap-Datapath Postmap Operations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:30(00:04:46) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:42:57 (Nov24) |  312.7 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:22(00:13:45) |  00:08:52(00:08:59) |  56.2( 55.6) |   15:51:56 (Nov24) |  708.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:23(00:13:46) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:51:57 (Nov24) |  708.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:29(00:14:45) |  00:00:06(00:00:59) |   0.6(  6.1) |   15:52:56 (Nov24) |  603.0 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:30(00:14:46) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:52:57 (Nov24) |  603.0 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:14(00:20:53) |  00:06:44(00:06:07) |  42.7( 37.9) |   15:59:04 (Nov24) |  651.2 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:16(00:20:55) |  00:00:02(00:00:02) |   0.2(  0.2) |   15:59:06 (Nov24) |  651.2 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_TechMap-Postmap HBO Optimizations - Elapsed_Time 1, CPU_Time 1.0
+stamp 'PBS_TechMap-Postmap HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:30(00:04:46) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:42:57 (Nov24) |  312.7 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:22(00:13:45) |  00:08:52(00:08:59) |  56.2( 55.6) |   15:51:56 (Nov24) |  708.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:23(00:13:46) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:51:57 (Nov24) |  708.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:29(00:14:45) |  00:00:06(00:00:59) |   0.6(  6.1) |   15:52:56 (Nov24) |  603.0 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:30(00:14:46) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:52:57 (Nov24) |  603.0 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:14(00:20:53) |  00:06:44(00:06:07) |  42.7( 37.8) |   15:59:04 (Nov24) |  651.2 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:16(00:20:55) |  00:00:02(00:00:02) |   0.2(  0.2) |   15:59:06 (Nov24) |  651.2 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:17(00:20:56) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:59:07 (Nov24) |  651.2 MB | PBS_TechMap-Postmap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+ Doing ConstProp on design:alu ... 
+
+PBS_TechMap-Postmap Clock Gating - Elapsed_Time 1, CPU_Time 2.0
+stamp 'PBS_TechMap-Postmap Clock Gating' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:30(00:04:46) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:42:57 (Nov24) |  312.7 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:22(00:13:45) |  00:08:52(00:08:59) |  56.0( 55.5) |   15:51:56 (Nov24) |  708.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:23(00:13:46) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:51:57 (Nov24) |  708.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:29(00:14:45) |  00:00:06(00:00:59) |   0.6(  6.1) |   15:52:56 (Nov24) |  603.0 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:30(00:14:46) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:52:57 (Nov24) |  603.0 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:14(00:20:53) |  00:06:44(00:06:07) |  42.6( 37.8) |   15:59:04 (Nov24) |  651.2 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:16(00:20:55) |  00:00:02(00:00:02) |   0.2(  0.2) |   15:59:06 (Nov24) |  651.2 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:17(00:20:56) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:59:07 (Nov24) |  651.2 MB | PBS_TechMap-Postmap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:19(00:20:57) |  00:00:02(00:00:01) |   0.2(  0.1) |   15:59:08 (Nov24) |  651.2 MB | PBS_TechMap-Postmap Clock Gating
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+ hi_fo_buf                     0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       hi_fo_buf         0  (        0 /        0 )  0.00
+
+ 
+Incremental optimization status
+===============================
+                                    Worst     Total - - DRC Totals - -
+                           Total  Weighted     Neg      Max       Max 
+Operation                   Area  Neg Slk     Slack    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_delay                    0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       crit_upsz         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+
+ 
+Local TNS optimization status
+=============================
+                                    Worst     Total - - DRC Totals - -
+                           Total  Weighted     Neg      Max       Max 
+Operation                   Area  Neg Slk     Slack    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_tns                      0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+
+PBS_TechMap-Postmap Cleanup - Elapsed_Time 1, CPU_Time 0.0
+stamp 'PBS_TechMap-Postmap Cleanup' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:30(00:04:46) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:42:57 (Nov24) |  312.7 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:22(00:13:45) |  00:08:52(00:08:59) |  56.0( 55.5) |   15:51:56 (Nov24) |  708.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:23(00:13:46) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:51:57 (Nov24) |  708.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:29(00:14:45) |  00:00:06(00:00:59) |   0.6(  6.1) |   15:52:56 (Nov24) |  603.0 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:30(00:14:46) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:52:57 (Nov24) |  603.0 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:14(00:20:53) |  00:06:44(00:06:07) |  42.6( 37.8) |   15:59:04 (Nov24) |  651.2 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:16(00:20:55) |  00:00:02(00:00:02) |   0.2(  0.2) |   15:59:06 (Nov24) |  651.2 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:17(00:20:56) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:59:07 (Nov24) |  651.2 MB | PBS_TechMap-Postmap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:19(00:20:57) |  00:00:02(00:00:01) |   0.2(  0.1) |   15:59:08 (Nov24) |  651.2 MB | PBS_TechMap-Postmap Clock Gating
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:19(00:20:58) |  00:00:00(00:00:01) |   0.0(  0.1) |   15:59:09 (Nov24) |  617.2 MB | PBS_TechMap-Postmap Cleanup
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_Techmap-Post_MBCI - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Techmap-Post_MBCI' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:30(00:04:46) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:42:57 (Nov24) |  312.7 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:22(00:13:45) |  00:08:52(00:08:59) |  56.0( 55.5) |   15:51:56 (Nov24) |  708.3 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:23(00:13:46) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:51:57 (Nov24) |  708.3 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:29(00:14:45) |  00:00:06(00:00:59) |   0.6(  6.1) |   15:52:56 (Nov24) |  603.0 MB | PBS_TechMap-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:09:30(00:14:46) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:52:57 (Nov24) |  603.0 MB | PBS_TechMap-Premap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:14(00:20:53) |  00:06:44(00:06:07) |  42.6( 37.8) |   15:59:04 (Nov24) |  651.2 MB | PBS_Techmap-Global Mapping
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:16(00:20:55) |  00:00:02(00:00:02) |   0.2(  0.2) |   15:59:06 (Nov24) |  651.2 MB | PBS_TechMap-Datapath Postmap Operations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:17(00:20:56) |  00:00:01(00:00:01) |   0.1(  0.1) |   15:59:07 (Nov24) |  651.2 MB | PBS_TechMap-Postmap HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:19(00:20:57) |  00:00:02(00:00:01) |   0.2(  0.1) |   15:59:08 (Nov24) |  651.2 MB | PBS_TechMap-Postmap Clock Gating
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:19(00:20:58) |  00:00:00(00:00:01) |   0.0(  0.1) |   15:59:09 (Nov24) |  617.2 MB | PBS_TechMap-Postmap Cleanup
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:16:19(00:20:58) |  00:00:00(00:00:00) |   0.0(  0.0) |   15:59:09 (Nov24) |  617.2 MB | PBS_Techmap-Post_MBCI
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+##>=================== Cadence Confidential (Mapping-Logical) ===================
+##>Main Thread Summary:
+##>----------------------------------------------------------------------------------------
+##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
+##>----------------------------------------------------------------------------------------
+##>M:Initial                            0         -         -     38075         0       603
+##>M:Pre Cleanup                        0         -         -     38075         0       603
+##>M:Setup                              0         -         -         -         -         -
+##>M:Launch ST                          0         -         -         -         -         -
+##>M:Design Partition                   0         -         -         -         -         -
+##>M:Create Partition Netlists          0         -         -         -         -         -
+##>M:Init Power                         0         -         -         -         -         -
+##>M:Budgeting                          0         -         -         -         -         -
+##>M:Derenv-DB                          0         -         -         -         -         -
+##>M:Debug Outputs                      0         -         -         -         -         -
+##>M:ST loading                         0         -         -         -         -         -
+##>M:Distributed                        0         -         -         -         -         -
+##>M:Timer                              0         -         -         -         -         -
+##>M:Assembly                           0         -         -         -         -         -
+##>M:DFT                                0         -         -         -         -         -
+##>M:DP Operations                      2         -         -     12654         0       651
+##>M:Const Prop                         0         -         0     12654         0       651
+##>M:Cleanup                            1         -         0     12654         0       617
+##>M:MBCI                               0         -         -     12654         0       617
+##>M:Misc                             370
+##>----------------------------------------------------------------------------------------
+##>Total Elapsed                      373
+##>========================================================================================
+
++-----------+-----------------------+-----+----------------------+---------------------------+
+|   Host    |        Machine        | CPU | Physical Memory (MB) | Peak Physical Memory (MB) |
++-----------+-----------------------+-----+----------------------+---------------------------+
+| localhost | localhost.localdomain |  1  |        617.2         |          1112.6           |
++-----------+-----------------------+-----+----------------------+---------------------------+
+
++---------------+----------------------+---------------------------+
+|    Server     | Physical Memory (MB) | Peak Physical Memory (MB) |
++---------------+----------------------+---------------------------+
+| localhost_1_0 |        252.0         |           484.7           |
++---------------+----------------------+---------------------------+
+Info    : Done mapping. [SYNTH-5]
+        : Done mapping 'alu'.
+     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:           692            430                                      syn_map
+@genus:root: 8> syn_opt
+Info    : Incrementally optimizing. [SYNTH-7]
+        : Incrementally optimizing 'alu' using 'high' effort.
+ 
+Incremental optimization status
+===============================
+                                    Worst     Total - - DRC Totals - -
+                           Total  Weighted     Neg      Max       Max 
+Operation                   Area  Neg Slk     Slack    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_iopt                     0        0         0         0        0
+ const_prop                    0        0         0         0        0
+ hi_fo_buf                     0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       hi_fo_buf         0  (        0 /        0 )  0.00
+
+ 
+Incremental optimization status
+===============================
+                                    Worst     Total - - DRC Totals - -
+                           Total  Weighted     Neg      Max       Max 
+Operation                   Area  Neg Slk     Slack    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_delay                    0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+        crit_msz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+       crit_swap         0  (        0 /        0 )  0.00
+       mux2_swap         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       load_swap         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+           phase         0  (        0 /        0 )  0.00
+        in_phase         0  (        0 /        0 )  0.00
+       merge_bit         0  (        0 /        0 )  0.00
+     merge_idrvr         0  (        0 /        0 )  0.00
+     merge_iload         0  (        0 /        0 )  0.00
+    merge_idload         0  (        0 /        0 )  0.00
+      merge_drvr         0  (        0 /        0 )  0.00
+      merge_load         0  (        0 /        0 )  0.00
+          decomp         0  (        0 /        0 )  0.00
+        p_decomp         0  (        0 /        0 )  0.00
+        levelize         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+      mux_retime         0  (        0 /        0 )  0.00
+         buf2inv         0  (        0 /        0 )  0.00
+             exp         0  (        0 /        0 )  0.00
+       gate_deco         0  (        0 /        0 )  0.00
+       gcomp_tim         0  (        0 /        0 )  0.00
+  inv_pair_2_buf         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+         crr_220         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_200         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_300         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_400         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_111         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_210         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_110         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_101         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_201         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_211         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+        crit_msz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+       crit_swap         0  (        0 /        0 )  0.00
+       mux2_swap         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       load_swap         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+       merge_bit         0  (        0 /        0 )  0.00
+     merge_idrvr         0  (        0 /        0 )  0.00
+     merge_iload         0  (        0 /        0 )  0.00
+    merge_idload         0  (        0 /        0 )  0.00
+      merge_drvr         0  (        0 /        0 )  0.00
+      merge_load         0  (        0 /        0 )  0.00
+           phase         0  (        0 /        0 )  0.00
+          decomp         0  (        0 /        0 )  0.00
+        p_decomp         0  (        0 /        0 )  0.00
+        levelize         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+        in_phase         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+      mux_retime         0  (        0 /        0 )  0.00
+         buf2inv         0  (        0 /        0 )  0.00
+             exp         0  (        0 /        0 )  0.00
+       gate_deco         0  (        0 /        0 )  0.00
+       gcomp_tim         0  (        0 /        0 )  0.00
+  inv_pair_2_buf         0  (        0 /        0 )  0.00
+ init_drc                      0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      drc_buf_sp         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      drc_buf_sp         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+ init_tns                      0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+            fopt         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+        crit_msz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+       crit_swap         0  (        0 /        0 )  0.00
+       mux2_swap         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       load_swap         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+       merge_bit         0  (        0 /        0 )  0.00
+     merge_idrvr         0  (        0 /        0 )  0.00
+     merge_iload         0  (        0 /        0 )  0.00
+    merge_idload         0  (        0 /        0 )  0.00
+      merge_drvr         0  (        0 /        0 )  0.00
+      merge_load         0  (        0 /        0 )  0.00
+           phase         0  (        0 /        0 )  0.00
+          decomp         0  (        0 /        0 )  0.00
+        p_decomp         0  (        0 /        0 )  0.00
+        levelize         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+      mux_retime         0  (        0 /        0 )  0.00
+       crr_local         0  (        0 /        0 )  0.00
+         buf2inv         0  (        0 /        0 )  0.00
+
+ init_area                     0        0         0         0        0
+ undup                         0        0         0         0        0
+ rem_buf                       0        0         0         0        0
+ rem_inv                       0        0         0         0        0
+ merge_bi                      0        0         0         0        0
+ io_phase                      0        0         0         0        0
+ gate_comp                     0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+           undup        22  (       22 /       22 )  0.45
+         rem_buf         1  (        1 /        1 )  0.04
+         rem_inv        34  (       34 /       34 )  0.22
+        merge_bi       273  (      273 /      273 )  9.64
+      rem_inv_qb         0  (        0 /        0 )  0.00
+    seq_res_area         0  (        0 /        0 )  0.00
+        io_phase       165  (       75 /       75 )  1.44
+       gate_comp       179  (      157 /      157 )  2.66
+       gcomp_mog         0  (        0 /        0 )  0.82
+       glob_area        50  (        0 /       50 )  0.05
+       area_down         0  (        0 /        0 )  0.04
+      size_n_buf         0  (        0 /        0 )  0.00
+  gate_deco_area         0  (        0 /        0 )  0.05
+         rem_buf         0  (        0 /        0 )  0.00
+         rem_inv         0  (        0 /        0 )  0.00
+        merge_bi         0  (        0 /        0 )  0.06
+      rem_inv_qb         0  (        0 /        0 )  0.01
+
+ 
+Incremental optimization status
+===============================
+                                    Worst     Total - - DRC Totals - -
+                           Total  Weighted     Neg      Max       Max 
+Operation                   Area  Neg Slk     Slack    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_delay                    0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+         crr_220         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_200         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_300         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_400         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_111         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_210         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_110         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_101         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_201         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+         crr_211         0  (        0 /        0 )  0.00
+        crr_glob         0  (        0 /        0 )  0.00
+        crit_msz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+       crit_swap         0  (        0 /        0 )  0.00
+       mux2_swap         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       load_swap         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+       merge_bit         0  (        0 /        0 )  0.00
+     merge_idrvr         0  (        0 /        0 )  0.00
+     merge_iload         0  (        0 /        0 )  0.00
+    merge_idload         0  (        0 /        0 )  0.00
+      merge_drvr         0  (        0 /        0 )  0.00
+      merge_load         0  (        0 /        0 )  0.00
+           phase         0  (        0 /        0 )  0.00
+          decomp         0  (        0 /        0 )  0.00
+        p_decomp         0  (        0 /        0 )  0.00
+        levelize         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+        in_phase         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+      mux_retime         0  (        0 /        0 )  0.00
+         buf2inv         0  (        0 /        0 )  0.00
+             exp         0  (        0 /        0 )  0.00
+       gate_deco         0  (        0 /        0 )  0.00
+       gcomp_tim         0  (        0 /        0 )  0.00
+  inv_pair_2_buf         0  (        0 /        0 )  0.00
+ init_drc                      0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+ init_tns                      0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+            fopt         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+        crit_msz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+       crit_swap         0  (        0 /        0 )  0.00
+       mux2_swap         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       load_swap         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+       merge_bit         0  (        0 /        0 )  0.00
+     merge_idrvr         0  (        0 /        0 )  0.00
+     merge_iload         0  (        0 /        0 )  0.00
+    merge_idload         0  (        0 /        0 )  0.00
+      merge_drvr         0  (        0 /        0 )  0.00
+      merge_load         0  (        0 /        0 )  0.00
+           phase         0  (        0 /        0 )  0.00
+          decomp         0  (        0 /        0 )  0.00
+        p_decomp         0  (        0 /        0 )  0.00
+        levelize         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+      mux_retime         0  (        0 /        0 )  0.00
+       crr_local         0  (        0 /        0 )  0.00
+         buf2inv         0  (        0 /        0 )  0.00
+
+ init_area                     0        0         0         0        0
+ undup                         0        0         0         0        0
+ merge_bi                      0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+           undup       221  (      221 /      221 )  8.85
+         rem_buf         0  (        0 /        0 )  0.00
+         rem_inv         0  (        0 /        0 )  0.00
+        merge_bi        36  (       36 /       36 )  0.52
+      rem_inv_qb         0  (        0 /        0 )  0.00
+        io_phase        36  (        0 /        0 )  0.09
+       gate_comp        22  (        0 /        0 )  1.03
+       gcomp_mog         0  (        0 /        0 )  0.81
+       glob_area        50  (        0 /       50 )  0.05
+       area_down         0  (        0 /        0 )  0.04
+      size_n_buf         0  (        0 /        0 )  0.00
+  gate_deco_area         0  (        0 /        0 )  0.00
+
+ 
+Incremental optimization status
+===============================
+                                    Worst     Total - - DRC Totals - -
+                           Total  Weighted     Neg      Max       Max 
+Operation                   Area  Neg Slk     Slack    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_delay                    0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+        crit_msz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       plc_lo_st         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+       crit_swap         0  (        0 /        0 )  0.00
+       mux2_swap         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       load_swap         0  (        0 /        0 )  0.00
+            fopt         0  (        0 /        0 )  0.00
+        setup_dn         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+       load_isol         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+        move_for         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+          rem_bi         0  (        0 /        0 )  0.00
+         offload         0  (        0 /        0 )  0.00
+           phase         0  (        0 /        0 )  0.00
+        in_phase         0  (        0 /        0 )  0.00
+       merge_bit         0  (        0 /        0 )  0.00
+     merge_idrvr         0  (        0 /        0 )  0.00
+     merge_iload         0  (        0 /        0 )  0.00
+    merge_idload         0  (        0 /        0 )  0.00
+      merge_drvr         0  (        0 /        0 )  0.00
+      merge_load         0  (        0 /        0 )  0.00
+          decomp         0  (        0 /        0 )  0.00
+        p_decomp         0  (        0 /        0 )  0.00
+        levelize         0  (        0 /        0 )  0.00
+        mb_split         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+      mux_retime         0  (        0 /        0 )  0.00
+         buf2inv         0  (        0 /        0 )  0.00
+             exp         0  (        0 /        0 )  0.00
+       gate_deco         0  (        0 /        0 )  0.00
+       gcomp_tim         0  (        0 /        0 )  0.00
+  inv_pair_2_buf         0  (        0 /        0 )  0.00
+
+ init_drc                      0        0         0         0        0
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+       crit_slew         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+Info    : Done incrementally optimizing. [SYNTH-8]
+        : Done incrementally optimizing 'alu'.
+     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:            34             91                                      syn_opt
+@genus:root: 9> write_hdl > syn_opt_file.v
+@genus:root: 10> gui_show
+no gcells found!
+@genus:root: 11> report_timing -unconstrained
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'alu'.
+        : Use 'report timing -lint' for more information.
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution 17.22-s017_1
+  Generated on:           Nov 24 2023  04:04:21 pm
+  Module:                 alu
+  Operating conditions:   slow (balanced_tree)
+  Wireload mode:          enclosed
+  Area mode:              timing library
+============================================================
+
+
+Path 1: UNCONSTRAINED Setup Check with Pin result_reg[1]/G->D
+     Startpoint: (F) in2[2]
+       Endpoint: (F) result_reg[1]/D
+
+                                     
+          Setup:-     172            
+      Data Path:-   68841            
+
+#-------------------------------------------------------------------------------------------------
+#     Timing Point      Flags    Arc    Edge   Cell     Fanout  Load Trans Delay Arrival Instance 
+#                                                               (fF)  (ps)  (ps)   (ps)  Location 
+#-------------------------------------------------------------------------------------------------
+  in2[2]                -       -       F     (arrival)     25  45.3     0     0       0    (-,-) 
+  rem_15_31_g119232/Y   -       A->Y    R     INVX20        61 143.2   117    59      59    (-,-) 
+  div_14_31_g119646/Y   -       A->Y    R     AND2X1         5  10.6   175   216     276    (-,-) 
+  rem_15_31_g118962/Y   -       A->Y    R     OR2X1          2   3.7    70   146     422    (-,-) 
+  g119530/Y             -       A1->Y   F     OAI221X4       2   2.0   127   124     546    (-,-) 
+  rem_15_31_g118932/Y   -       B->Y    F     AND2X1         2   6.2   117   145     692    (-,-) 
+  g119529/Y             -       A1->Y   R     AOI221X4       2   1.9   105   130     822    (-,-) 
+  rem_15_31_g118921/Y   -       B->Y    R     OR2X1          2   1.4    36    97     919    (-,-) 
+  rem_15_31_g118920/Y   -       A->Y    F     INVX1          1   0.6    21    26     945    (-,-) 
+  rem_15_31_g118911/Y   -       A1->Y   R     AOI211XL       2   1.9   230   148    1094    (-,-) 
+  rem_15_31_g118909/Y   -       B->Y    R     OR2X1          2   1.4    36   142    1236    (-,-) 
+  rem_15_31_g118908/Y   -       A->Y    F     INVX1          1   0.6    21    26    1262    (-,-) 
+  rem_15_31_g118897/Y   -       A1->Y   R     AOI211XL       2   1.9   230   148    1411    (-,-) 
+  rem_15_31_g118895/Y   -       B->Y    R     OR2X1          2   1.4    36   143    1553    (-,-) 
+  rem_15_31_g118894/Y   -       A->Y    F     INVX1          1   0.6    21    26    1580    (-,-) 
+  rem_15_31_g118886/Y   -       A1->Y   R     AOI211XL       2   1.9   230   148    1728    (-,-) 
+  rem_15_31_g118883/Y   -       B->Y    R     OR2X1          2   1.4    36   143    1871    (-,-) 
+  rem_15_31_g118882/Y   -       A->Y    F     INVX1          1   0.6    21    26    1897    (-,-) 
+  rem_15_31_g118875/Y   -       A1->Y   R     AOI211XL       2   1.9   230   148    2045    (-,-) 
+  rem_15_31_g118870/Y   -       B->Y    R     OR2X1          2   1.4    36   143    2188    (-,-) 
+  rem_15_31_g118869/Y   -       A->Y    F     INVX1          1   0.6    21    26    2214    (-,-) 
+  rem_15_31_g118861/Y   -       A1->Y   R     AOI211XL       2   7.4   648   365    2579    (-,-) 
+  rem_15_31_g119278/Y   -       B->Y    F     NOR2X8         2   3.7   166   178    2757    (-,-) 
+  rem_15_31_g118852/Y   -       A1->Y   R     AOI211XL       2   7.4   648   413    3169    (-,-) 
+  rem_15_31_g119276/Y   -       B->Y    F     NOR2X8         2   3.7   166   178    3347    (-,-) 
+  rem_15_31_g118844/Y   -       A1->Y   R     AOI211XL       2   1.9   230   196    3543    (-,-) 
+  rem_15_31_g118843/Y   -       B->Y    R     OR2X1          2   1.4    36   143    3685    (-,-) 
+  rem_15_31_g118842/Y   -       A->Y    F     INVX1          1   0.6    21    26    3712    (-,-) 
+  rem_15_31_g118837/Y   -       A1->Y   R     AOI211XL       2   4.4   420   247    3958    (-,-) 
+  rem_15_31_g119274/Y   -       B->Y    F     NOR2BX4        2   3.7   118   149    4108    (-,-) 
+  rem_15_31_g118827/Y   -       A1->Y   R     AOI211XL       2   1.9   230   183    4291    (-,-) 
+  rem_15_31_g118826/Y   -       B->Y    R     OR2X1          2   1.4    36   143    4433    (-,-) 
+  rem_15_31_g118825/Y   -       A->Y    F     INVX1          1   0.6    21    26    4459    (-,-) 
+  rem_15_31_g118819/Y   -       A1->Y   R     AOI211XL       2   1.9   230   148    4608    (-,-) 
+  rem_15_31_g118818/Y   -       B->Y    R     OR2X1          2   1.4    36   143    4750    (-,-) 
+  rem_15_31_g118817/Y   -       A->Y    F     INVX1          1   3.1    62    47    4797    (-,-) 
+  g119528/Y             -       A1->Y   R     AOI221X4       2   1.9   104   112    4909    (-,-) 
+  rem_15_31_g118810/Y   -       B->Y    R     OR2X1          2   9.2   149   153    5062    (-,-) 
+  g119527/Y             -       A1->Y   F     OAI221X4       2   2.0   127   150    5213    (-,-) 
+  g119526/Y             -       C->Y    R     XOR3XL         2   1.9    96   192    5405    (-,-) 
+  rem_15_31_g118799/Y   -       B->Y    R     AND2X1         2   1.4    45   135    5540    (-,-) 
+  rem_15_31_g118798/Y   -       A->Y    F     INVX1          1   0.6    21    29    5569    (-,-) 
+  rem_15_31_g118797/Y   -       D->Y    F     OR4X1          2   3.7   118   225    5795    (-,-) 
+  rem_15_31_g118795/Y   -       C->Y    F     OR3X1          2   1.2    61   184    5979    (-,-) 
+  rem_15_31_g118794/Y   -       C->Y    F     OR3X1          2   1.4    64   168    6147    (-,-) 
+  rem_15_31_g118793/Y   -       A->Y    R     INVX1          2   1.5    33    41    6187    (-,-) 
+  rem_15_31_g118792/Y   -       D->Y    R     AND4X1         2   1.2    83   242    6430    (-,-) 
+  rem_15_31_g118791/Y   -       C->Y    R     AND3X1         2   3.7    96   210    6640    (-,-) 
+  rem_15_31_g118789/Y   -       C->Y    R     AND3X1         2   1.2    61   195    6835    (-,-) 
+  rem_15_31_g118788/Y   -       C->Y    R     AND3X1         2   1.2    61   185    7020    (-,-) 
+  rem_15_31_g118787/Y   -       C->Y    R     AND3X1         2   1.2    61   185    7205    (-,-) 
+  rem_15_31_g118786/Y   -       C->Y    R     AND3X1         2   1.4    64   187    7392    (-,-) 
+  rem_15_31_g118785/Y   -       A->Y    F     INVX1          1   0.6    21    36    7428    (-,-) 
+  rem_15_31_g118784/Y   -       C->Y    F     OR3X1          2   1.3    62   156    7584    (-,-) 
+  rem_15_31_g118783/Y   -       A->Y    R     INVX1          2   1.3    30    39    7623    (-,-) 
+  rem_15_31_g118782/Y   -       D->Y    R     AND4XL         1   0.6    74   228    7850    (-,-) 
+  rem_15_31_g118781/Y   -       D->Y    R     AND4X1         3   3.4   113   272    8122    (-,-) 
+  rem_15_31_g118779/Y   -       B->Y    R     OR2X1          2   1.6    39   102    8224    (-,-) 
+  rem_15_31_g119293/Y   -       A1N->Y  R     OAI2BB1X4      1   0.6    46   134    8358    (-,-) 
+  rem_15_31_g118768/Y   -       B0->Y   R     OA21X2         2   2.1    52   153    8511    (-,-) 
+  rem_15_31_g118767/Y   -       A->Y    F     INVX2          3   5.4    55    49    8560    (-,-) 
+  rem_15_31_g118756/CO  -       CI->CO  F     ADDFXL         1   1.8   101   196    8756    (-,-) 
+  rem_15_31_g118746/CO  -       CI->CO  F     ADDFXL         1   0.8    73   196    8952    (-,-) 
+  rem_15_31_g118745/Y   -       A->Y    R     INVX1          1   1.8    38    46    8998    (-,-) 
+  rem_15_31_g118741/CO  -       CI->CO  R     ADDFXL         1   1.3    74   188    9187    (-,-) 
+  rem_15_31_g118738/CON -       CI->CON F     ACHCONX2       1   0.6   120    79    9265    (-,-) 
+  rem_15_31_g118735/Y   -       B->Y    F     AND2X1         6   3.6    74   121    9387    (-,-) 
+  rem_15_31_g118731/Y   -       A->Y    F     AND2X1         2   2.1    50    96    9482    (-,-) 
+  rem_15_31_g118730/Y   -       A->Y    R     INVX2          4   2.4    28    33    9515    (-,-) 
+  rem_15_31_g118724/Y   -       B1->Y   R     OA22X1         1   0.7    41   125    9640    (-,-) 
+  rem_15_31_g118719/Y   -       C0->Y   F     OAI221XL       4   7.5   774   440   10079    (-,-) 
+  rem_15_31_g118712/CO  -       B->CO   F     ADDFXL         1   1.8   100   436   10515    (-,-) 
+  rem_15_31_g118709/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   10726    (-,-) 
+  rem_15_31_g118702/CO  -       CI->CO  F     ADDFXL         1   0.8    71   196   10922    (-,-) 
+  rem_15_31_g118701/Y   -       A->Y    R     INVX1          1   1.8    38    46   10967    (-,-) 
+  rem_15_31_g118697/CO  -       CI->CO  R     ADDFXL         1   0.8    61   182   11149    (-,-) 
+  rem_15_31_g118696/Y   -       A->Y    F     INVX1          1   1.3    32    41   11190    (-,-) 
+  rem_15_31_g118692/CON -       CI->CON R     ACHCONX2       1   0.6   142    49   11240    (-,-) 
+  rem_15_31_g118687/Y   -       B->Y    R     OR2X1          2   3.7    70   128   11367    (-,-) 
+  rem_15_31_g118681/Y   -       C->Y    R     OR3X1          3   2.7    57   103   11470    (-,-) 
+  rem_15_31_g118672/Y   -       B1->Y   R     OA22X1         1   0.7    41   134   11605    (-,-) 
+  rem_15_31_g118661/Y   -       C0->Y   F     OAI221XL       4   7.5   774   440   12044    (-,-) 
+  rem_15_31_g118654/CO  -       B->CO   F     ADDFXL         1   1.8   100   436   12480    (-,-) 
+  rem_15_31_g118649/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   12691    (-,-) 
+  rem_15_31_g118645/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   12902    (-,-) 
+  rem_15_31_g118637/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   13114    (-,-) 
+  rem_15_31_g118630/CO  -       CI->CO  F     ADDFXL         1   0.8    73   196   13310    (-,-) 
+  rem_15_31_g118629/Y   -       A->Y    R     INVX1          1   1.8    38    46   13356    (-,-) 
+  rem_15_31_g118626/CO  -       CI->CO  R     ADDFXL         1   0.8    62   182   13538    (-,-) 
+  rem_15_31_g118625/Y   -       A->Y    F     INVX1          1   1.3    32    42   13580    (-,-) 
+  rem_15_31_g118620/CON -       CI->CON R     ACHCONX2       1   0.6   142    49   13629    (-,-) 
+  rem_15_31_g118614/Y   -       D->Y    R     OR4X1          2   1.2    37   123   13752    (-,-) 
+  rem_15_31_g118609/Y   -       B->Y    R     OR2X2          5   3.9    48    91   13844    (-,-) 
+  rem_15_31_g118608/Y   -       A->Y    F     INVX2          5   3.3    38    39   13882    (-,-) 
+  rem_15_31_g118607/Y   -       B->Y    F     OR2X1          2   1.4    45   104   13987    (-,-) 
+  rem_15_31_g118606/Y   -       A->Y    R     INVX1          1   0.6    19    27   14014    (-,-) 
+  rem_15_31_g118594/Y   -       A1->Y   R     AO21X1         1   0.6    35   122   14136    (-,-) 
+  rem_15_31_g118585/Y   -       B0->Y   R     OA21X2         2   3.4    61   155   14290    (-,-) 
+  rem_15_31_g118584/Y   -       A->Y    F     INVX4          3   5.4    36    41   14331    (-,-) 
+  rem_15_31_g118581/CO  -       CI->CO  F     ADDFXL         1   1.8   101   190   14521    (-,-) 
+  rem_15_31_g118575/CO  -       CI->CO  F     ADDFXL         1   1.8   103   211   14732    (-,-) 
+  rem_15_31_g118569/CO  -       CI->CO  F     ADDFXL         1   1.8   103   212   14944    (-,-) 
+  rem_15_31_g118565/CO  -       CI->CO  F     ADDFXL         1   1.8   101   212   15156    (-,-) 
+  rem_15_31_g118558/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   15368    (-,-) 
+  rem_15_31_g118556/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   15578    (-,-) 
+  rem_15_31_g118553/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   15789    (-,-) 
+  rem_15_31_g118549/CO  -       CI->CO  F     ADDFXL         1   0.8    71   196   15985    (-,-) 
+  rem_15_31_g118548/Y   -       A->Y    R     INVX1          1   1.8    38    46   16030    (-,-) 
+  rem_15_31_g118544/CO  -       CI->CO  R     ADDFXL         1   1.3    76   188   16219    (-,-) 
+  rem_15_31_g118540/CON -       CI->CON F     ACHCONX2       1   0.6   120    79   16298    (-,-) 
+  rem_15_31_g118535/Y   -       B->Y    F     AND2X1         2   1.2    36   102   16400    (-,-) 
+  rem_15_31_g118530/Y   -       C->Y    F     AND3X2         5   5.2    64   103   16502    (-,-) 
+  rem_15_31_g118529/Y   -       A->Y    R     INVX4          6   3.9    28    36   16539    (-,-) 
+  rem_15_31_g118523/Y   -       A1->Y   R     OA22X1         1   0.7    41   150   16689    (-,-) 
+  rem_15_31_g118505/Y   -       C0->Y   F     OAI221XL       4   7.5   774   440   17128    (-,-) 
+  rem_15_31_g118494/CO  -       B->CO   F     ADDFXL         1   1.8   100   436   17564    (-,-) 
+  rem_15_31_g118491/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   17775    (-,-) 
+  rem_15_31_g118488/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   17986    (-,-) 
+  rem_15_31_g118486/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   18197    (-,-) 
+  rem_15_31_g118482/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   18408    (-,-) 
+  rem_15_31_g118477/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   18618    (-,-) 
+  rem_15_31_g118471/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   18830    (-,-) 
+  rem_15_31_g118465/CO  -       CI->CO  F     ADDFXL         1   1.8   103   211   19041    (-,-) 
+  rem_15_31_g118463/CO  -       CI->CO  F     ADDFXL         1   0.8    75   197   19238    (-,-) 
+  rem_15_31_g118462/Y   -       A->Y    R     INVX1          1   1.8    38    47   19285    (-,-) 
+  rem_15_31_g118453/CO  -       CI->CO  R     ADDFXL         1   0.8    61   182   19467    (-,-) 
+  rem_15_31_g118452/Y   -       A->Y    F     INVX1          1   1.3    32    41   19508    (-,-) 
+  rem_15_31_g118448/CON -       CI->CON R     ACHCONX2       1   0.6   142    49   19557    (-,-) 
+  rem_15_31_g118443/Y   -       C->Y    R     OR3X2          9   7.2    75   153   19710    (-,-) 
+  rem_15_31_g118442/Y   -       A->Y    F     INVX4          6   3.6    30    42   19752    (-,-) 
+  rem_15_31_g118437/Y   -       B->Y    F     AND2X2         9   6.3    70    99   19851    (-,-) 
+  rem_15_31_g118436/Y   -       A->Y    R     INVX2          5   3.0    34    42   19894    (-,-) 
+  rem_15_31_g118428/Y   -       B->Y    R     AND2X1         2   1.4    45   115   20008    (-,-) 
+  rem_15_31_g118415/Y   -       A1->Y   R     OA21X1         1   0.6    36   128   20136    (-,-) 
+  rem_15_31_g118400/Y   -       B0->Y   R     AO21X2         4   6.2    82   105   20240    (-,-) 
+  rem_15_31_g118393/CO  -       CI->CO  R     ADDFXL         1   1.8    86   210   20450    (-,-) 
+  rem_15_31_g118387/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   20662    (-,-) 
+  rem_15_31_g118381/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   20873    (-,-) 
+  rem_15_31_g118375/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   21084    (-,-) 
+  rem_15_31_g118371/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   21296    (-,-) 
+  rem_15_31_g118363/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   21507    (-,-) 
+  rem_15_31_g118359/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   21718    (-,-) 
+  rem_15_31_g118353/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   21929    (-,-) 
+  rem_15_31_g118347/CO  -       CI->CO  R     ADDFXL         1   1.8    88   211   22141    (-,-) 
+  rem_15_31_g118345/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   22353    (-,-) 
+  rem_15_31_g118342/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   22565    (-,-) 
+  rem_15_31_g118338/CO  -       CI->CO  R     ADDFXL         2   1.9    91   213   22778    (-,-) 
+  rem_15_31_g118334/Y   -       B0->Y   R     AO21X1         2   3.8    81   116   22894    (-,-) 
+  g119547/Y             -       B0->Y   F     OAI2BB1X4      1   3.0    72    68   22962    (-,-) 
+  g119546/Y             -       A1->Y   R     OAI21X4        1   0.7    48    52   23014    (-,-) 
+  rem_15_31_g118327/Y   -       C0->Y   F     OAI221XL       1   0.6   199   134   23148    (-,-) 
+  rem_15_31_g118323/Y   -       B->Y    F     OR2X2          5   4.4    68   191   23339    (-,-) 
+  rem_15_31_g118322/Y   -       A->Y    R     INVX3         13   7.8    52    50   23389    (-,-) 
+  rem_15_31_g118306/Y   -       A1->Y   R     OA22X1         1   0.7    41   159   23547    (-,-) 
+  rem_15_31_g118293/Y   -       C0->Y   F     OAI221XL       4   7.5   775   440   23987    (-,-) 
+  rem_15_31_g118272/CO  -       B->CO   F     ADDFXL         1   1.8   100   436   24423    (-,-) 
+  rem_15_31_g118270/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   24634    (-,-) 
+  rem_15_31_g118267/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   24845    (-,-) 
+  rem_15_31_g118264/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   25056    (-,-) 
+  rem_15_31_g118261/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   25266    (-,-) 
+  rem_15_31_g118258/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   25477    (-,-) 
+  rem_15_31_g118255/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   25688    (-,-) 
+  rem_15_31_g118252/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   25899    (-,-) 
+  rem_15_31_g118249/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   26110    (-,-) 
+  rem_15_31_g118246/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   26320    (-,-) 
+  rem_15_31_g118240/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   26532    (-,-) 
+  rem_15_31_g118234/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   26743    (-,-) 
+  rem_15_31_g118222/CO  -       CI->CO  F     ADDFXL         1   0.8    73   196   26939    (-,-) 
+  rem_15_31_g118221/Y   -       A->Y    R     INVX1          1   1.8    38    46   26985    (-,-) 
+  rem_15_31_g118216/CO  -       CI->CO  R     ADDFXL         1   1.3    74   188   27174    (-,-) 
+  rem_15_31_g118213/CON -       CI->CON F     ACHCONX2       1   0.6   120    79   27252    (-,-) 
+  rem_15_31_g118209/Y   -       C->Y    F     AND3X2         7   7.8    84   145   27397    (-,-) 
+  rem_15_31_g118204/Y   -       B->Y    F     AND2X2        13  10.0   100   134   27531    (-,-) 
+  rem_15_31_g118203/Y   -       A->Y    R     INVX4          5   3.0    32    48   27580    (-,-) 
+  rem_15_31_g118200/Y   -       B->Y    R     AND2X1         2   1.4    45   114   27694    (-,-) 
+  rem_15_31_g118199/Y   -       A->Y    F     INVX1          1   0.6    21    29   27723    (-,-) 
+  rem_15_31_g118182/Y   -       A1->Y   F     AO21X1         1   0.6    35   111   27834    (-,-) 
+  rem_15_31_g118175/Y   -       B0->Y   F     OA21X2         2   2.1    53    89   27923    (-,-) 
+  rem_15_31_g118167/Y   -       A->Y    R     INVX2          3   5.4    50    44   27968    (-,-) 
+  rem_15_31_g118148/CO  -       CI->CO  R     ADDFXL         1   1.8    86   199   28167    (-,-) 
+  rem_15_31_g118142/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   28378    (-,-) 
+  rem_15_31_g118136/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   28589    (-,-) 
+  rem_15_31_g118130/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   28800    (-,-) 
+  rem_15_31_g118124/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   29012    (-,-) 
+  rem_15_31_g118118/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   29223    (-,-) 
+  rem_15_31_g118112/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   29434    (-,-) 
+  rem_15_31_g118106/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   29646    (-,-) 
+  rem_15_31_g118100/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   29857    (-,-) 
+  rem_15_31_g118094/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   30068    (-,-) 
+  rem_15_31_g118088/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   30280    (-,-) 
+  rem_15_31_g118082/CO  -       CI->CO  R     ADDFXL         1   1.8    86   211   30491    (-,-) 
+  rem_15_31_g118077/CO  -       CI->CO  R     ADDFXL         1   1.8    88   211   30702    (-,-) 
+  rem_15_31_g118073/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   30914    (-,-) 
+  rem_15_31_g118071/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   31126    (-,-) 
+  rem_15_31_g118069/CO  -       CI->CO  R     ADDFXL         2   1.9    91   213   31340    (-,-) 
+  rem_15_31_g118064/Y   -       B0->Y   R     AO21X1         2   3.8    81   116   31455    (-,-) 
+  g119545/Y             -       B0->Y   F     OAI2BB1X4      1   3.0    71    68   31524    (-,-) 
+  g119544/Y             -       A1->Y   R     OAI21X4        1   0.7    49    51   31575    (-,-) 
+  rem_15_31_g118055/Y   -       C0->Y   F     OAI221XL       1   0.6   199   134   31709    (-,-) 
+  rem_15_31_g118050/Y   -       B->Y    F     OR2X2          5   7.5    93   204   31913    (-,-) 
+  rem_15_31_g118049/Y   -       A->Y    R     INVX8         16   9.6    40    47   31960    (-,-) 
+  rem_15_31_g118038/Y   -       A1->Y   R     OA22X1         1   0.7    40   154   32114    (-,-) 
+  rem_15_31_g118015/Y   -       C0->Y   F     OAI221XL       4   7.5   774   440   32554    (-,-) 
+  rem_15_31_g117974/CO  -       B->CO   F     ADDFXL         1   1.8   100   436   32990    (-,-) 
+  rem_15_31_g117971/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   33201    (-,-) 
+  rem_15_31_g117968/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   33412    (-,-) 
+  rem_15_31_g117965/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   33622    (-,-) 
+  rem_15_31_g117962/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   33833    (-,-) 
+  rem_15_31_g117959/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   34044    (-,-) 
+  rem_15_31_g117956/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   34255    (-,-) 
+  rem_15_31_g117953/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   34466    (-,-) 
+  rem_15_31_g117950/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   34676    (-,-) 
+  rem_15_31_g117945/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   34887    (-,-) 
+  rem_15_31_g117942/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   35098    (-,-) 
+  rem_15_31_g117939/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   35309    (-,-) 
+  rem_15_31_g117935/CO  -       CI->CO  F     ADDFXL         1   0.8    71   196   35504    (-,-) 
+  rem_15_31_g117934/Y   -       A->Y    R     INVX1          2   1.9    39    46   35551    (-,-) 
+  rem_15_31_g117932/Y   -       B0->Y   R     AO21X1         2   1.2    44    77   35628    (-,-) 
+  rem_15_31_g117925/Y   -       A1->Y   F     OAI222XL       1   1.8   328   249   35877    (-,-) 
+  rem_15_31_g117915/CO  -       CI->CO  F     ADDFXL         1   1.8   104   287   36163    (-,-) 
+  rem_15_31_g117912/CO  -       CI->CO  F     ADDFXL         1   0.8    74   197   36360    (-,-) 
+  rem_15_31_g117911/Y   -       A->Y    R     INVX1          2   1.2    29    42   36403    (-,-) 
+  rem_15_31_g117910/Y   -       B0->Y   R     AO21X1         1   0.7    37    70   36472    (-,-) 
+  rem_15_31_g117909/Y   -       C0->Y   F     OAI221XL       1   0.6   201   130   36603    (-,-) 
+  rem_15_31_g117906/Y   -       C0->Y   R     OAI211XL       1   0.6   103    96   36699    (-,-) 
+  rem_15_31_g117903/Y   -       C->Y    R     OR3X1          2   1.2    35   105   36804    (-,-) 
+  rem_15_31_g117902/Y   -       B->Y    R     OR2X2          3   4.0    49    91   36894    (-,-) 
+  rem_15_31_g117877/Y   -       A->Y    R     AND2X1         2   1.6    48   128   37022    (-,-) 
+  rem_15_31_g119295/Y   -       A1N->Y  R     OAI2BB1X4      1   0.6    46   136   37158    (-,-) 
+  rem_15_31_g117867/Y   -       B0->Y   R     OA21X2         2   2.1    52   153   37312    (-,-) 
+  rem_15_31_g117857/Y   -       A->Y    F     INVX2          3   5.4    55    49   37361    (-,-) 
+  rem_15_31_g117826/CO  -       CI->CO  F     ADDFXL         1   1.8   101   196   37557    (-,-) 
+  rem_15_31_g117820/CO  -       CI->CO  F     ADDFXL         1   1.8   103   211   37768    (-,-) 
+  rem_15_31_g117814/CO  -       CI->CO  F     ADDFXL         1   1.8   101   212   37980    (-,-) 
+  rem_15_31_g117808/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   38191    (-,-) 
+  rem_15_31_g117802/CO  -       CI->CO  F     ADDFXL         1   1.8   103   211   38402    (-,-) 
+  rem_15_31_g117796/CO  -       CI->CO  F     ADDFXL         1   1.8   101   212   38614    (-,-) 
+  rem_15_31_g117790/CO  -       CI->CO  F     ADDFXL         1   1.8   103   211   38826    (-,-) 
+  rem_15_31_g117784/CO  -       CI->CO  F     ADDFXL         1   1.8   100   212   39037    (-,-) 
+  rem_15_31_g117778/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   39248    (-,-) 
+  rem_15_31_g117772/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   39460    (-,-) 
+  rem_15_31_g117766/CO  -       CI->CO  F     ADDFXL         1   1.8   103   211   39671    (-,-) 
+  rem_15_31_g117762/CO  -       CI->CO  F     ADDFXL         1   1.8   103   212   39883    (-,-) 
+  rem_15_31_g117754/CO  -       CI->CO  F     ADDFXL         1   1.8   103   212   40095    (-,-) 
+  rem_15_31_g117748/CO  -       CI->CO  F     ADDFXL         1   1.8   101   212   40307    (-,-) 
+  rem_15_31_g117742/CO  -       CI->CO  F     ADDFXL         1   1.8   103   211   40518    (-,-) 
+  rem_15_31_g117736/CO  -       CI->CO  F     ADDFXL         1   1.8   101   212   40730    (-,-) 
+  rem_15_31_g117730/CO  -       CI->CO  F     ADDFXL         1   1.8   103   211   40941    (-,-) 
+  rem_15_31_g117724/CO  -       CI->CO  F     ADDFXL         1   1.8   101   212   41153    (-,-) 
+  rem_15_31_g117718/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   41364    (-,-) 
+  rem_15_31_g117716/CO  -       CI->CO  F     ADDFXL         1   0.8    72   196   41560    (-,-) 
+  rem_15_31_g117715/Y   -       A->Y    R     INVX1          1   1.8    38    46   41607    (-,-) 
+  rem_15_31_g117704/CO  -       CI->CO  R     ADDFXL         1   0.8    61   182   41789    (-,-) 
+  rem_15_31_g117703/Y   -       A->Y    F     INVX1          1   1.3    32    41   41830    (-,-) 
+  rem_15_31_g117699/CON -       CI->CON R     ACHCONX2       1   0.6   142    49   41879    (-,-) 
+  rem_15_31_g117695/Y   -       B->Y    R     OR2X2          3   4.0    49   132   42011    (-,-) 
+  rem_15_31_g117694/Y   -       A->Y    F     INVX4         22  13.2    66    53   42063    (-,-) 
+  rem_15_31_g117693/Y   -       B->Y    F     AND2X1         2   2.8    62    95   42159    (-,-) 
+  rem_15_31_g117692/Y   -       A->Y    R     INVX3         22  13.2    77    61   42219    (-,-) 
+  rem_15_31_g117687/Y   -       B->Y    R     AND2X1         2   1.4    45   129   42348    (-,-) 
+  rem_15_31_g117664/Y   -       A1->Y   R     OA21X1         1   0.6    36   127   42475    (-,-) 
+  rem_15_31_g117654/Y   -       B0->Y   R     AO21X2         4   6.0    80   104   42579    (-,-) 
+  rem_15_31_g117636/CO  -       CI->CO  R     ADDFXL         1   1.8    86   210   42788    (-,-) 
+  rem_15_31_g117633/CO  -       CI->CO  R     ADDFXL         1   1.8    88   211   43000    (-,-) 
+  rem_15_31_g117630/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   43212    (-,-) 
+  rem_15_31_g117627/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   43424    (-,-) 
+  rem_15_31_g117624/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   43636    (-,-) 
+  rem_15_31_g117621/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   43848    (-,-) 
+  rem_15_31_g117618/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   44060    (-,-) 
+  rem_15_31_g117615/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   44272    (-,-) 
+  rem_15_31_g117612/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   44484    (-,-) 
+  rem_15_31_g117609/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   44697    (-,-) 
+  rem_15_31_g117606/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   44909    (-,-) 
+  rem_15_31_g117603/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   45121    (-,-) 
+  rem_15_31_g117600/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   45333    (-,-) 
+  rem_15_31_g117597/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   45545    (-,-) 
+  rem_15_31_g117594/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   45757    (-,-) 
+  rem_15_31_g117591/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   45969    (-,-) 
+  rem_15_31_g117588/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   46181    (-,-) 
+  rem_15_31_g117585/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   46393    (-,-) 
+  rem_15_31_g117582/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   46606    (-,-) 
+  rem_15_31_g117579/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   46818    (-,-) 
+  rem_15_31_g117576/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   47030    (-,-) 
+  rem_15_31_g117572/CO  -       CI->CO  R     ADDFXL         1   0.8    64   199   47229    (-,-) 
+  rem_15_31_g117571/Y   -       A->Y    F     INVX1          1   1.8    41    46   47275    (-,-) 
+  rem_15_31_g117567/CO  -       CI->CO  F     ADDFXL         1   1.3    89   184   47459    (-,-) 
+  rem_15_31_g117564/CON -       CI->CON R     ACHCONX2       1   0.6   142    69   47527    (-,-) 
+  rem_15_31_g117560/Y   -       C->Y    R     AND3X2         3   4.0    86   248   47776    (-,-) 
+  rem_15_31_g119264/Y   -       AN->Y   R     NOR2BX4       25  13.8   136   196   47972    (-,-) 
+  rem_15_31_g117552/Y   -       B->Y    R     OR2X1          2   1.6    39   110   48082    (-,-) 
+  rem_15_31_g119292/Y   -       A1N->Y  R     OAI2BB1X4      1   0.6    46   134   48215    (-,-) 
+  rem_15_31_g117517/Y   -       B0->Y   R     OA21X2         2   2.1    52   153   48369    (-,-) 
+  rem_15_31_g117505/Y   -       A->Y    F     INVX2          3   5.4    55    49   48418    (-,-) 
+  rem_15_31_g117468/CO  -       CI->CO  F     ADDFXL         1   1.8   101   196   48614    (-,-) 
+  rem_15_31_g117462/CO  -       CI->CO  F     ADDFXL         1   1.8   103   211   48825    (-,-) 
+  rem_15_31_g117456/CO  -       CI->CO  F     ADDFXL         1   1.8   101   212   49037    (-,-) 
+  rem_15_31_g117450/CO  -       CI->CO  F     ADDFXL         1   1.8   103   211   49248    (-,-) 
+  rem_15_31_g117444/CO  -       CI->CO  F     ADDFXL         1   1.8   101   212   49460    (-,-) 
+  rem_15_31_g117438/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   49671    (-,-) 
+  rem_15_31_g117432/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   49882    (-,-) 
+  rem_15_31_g117426/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   50093    (-,-) 
+  rem_15_31_g117420/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   50304    (-,-) 
+  rem_15_31_g117414/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   50516    (-,-) 
+  rem_15_31_g117408/CO  -       CI->CO  F     ADDFXL         1   1.8   103   211   50727    (-,-) 
+  rem_15_31_g117402/CO  -       CI->CO  F     ADDFXL         1   1.8   103   212   50939    (-,-) 
+  rem_15_31_g117396/CO  -       CI->CO  F     ADDFXL         1   1.8   100   212   51151    (-,-) 
+  rem_15_31_g117390/CO  -       CI->CO  F     ADDFXL         1   1.8   100   211   51362    (-,-) 
+  rem_15_31_g117384/CO  -       CI->CO  F     ADDFXL         1   1.8   103   211   51573    (-,-) 
+  rem_15_31_g117378/CO  -       CI->CO  F     ADDFXL         1   1.8   103   212   51785    (-,-) 
+  rem_15_31_g117372/CO  -       CI->CO  F     ADDFXL         1   1.8   103   212   51997    (-,-) 
+  rem_15_31_g117366/CO  -       CI->CO  F     ADDFXL         1   1.8   103   212   52209    (-,-) 
+  rem_15_31_g117360/CO  -       CI->CO  F     ADDFXL         1   1.8   103   212   52420    (-,-) 
+  rem_15_31_g117354/CO  -       CI->CO  F     ADDFXL         1   1.8   103   212   52632    (-,-) 
+  rem_15_31_g117348/CO  -       CI->CO  F     ADDFXL         1   1.8   101   212   52844    (-,-) 
+  rem_15_31_g117341/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   53056    (-,-) 
+  rem_15_31_g117332/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   53267    (-,-) 
+  rem_15_31_g117325/CO  -       CI->CO  F     ADDFXL         1   0.8    73   196   53463    (-,-) 
+  rem_15_31_g117324/Y   -       A->Y    R     INVX1          1   1.8    38    46   53509    (-,-) 
+  rem_15_31_g117317/CO  -       CI->CO  R     ADDFXL         1   0.8    61   182   53691    (-,-) 
+  rem_15_31_g117316/Y   -       A->Y    F     INVX1          1   1.3    32    41   53732    (-,-) 
+  rem_15_31_g117313/CON -       CI->CON R     ACHCONX2       1   0.9   146    51   53784    (-,-) 
+  rem_15_31_g119282/Y   -       AN->Y   R     NAND2BX4       3   4.0    44   132   53915    (-,-) 
+  rem_15_31_g117309/Y   -       A->Y    F     INVX4         26  15.6    76    56   53971    (-,-) 
+  rem_15_31_g117308/Y   -       B->Y    F     AND2X2         3   4.0    52   106   54077    (-,-) 
+  rem_15_31_g117302/Y   -       B->Y    F     OR2X1          2   1.4    46   109   54186    (-,-) 
+  rem_15_31_g117301/Y   -       A->Y    R     INVX1          1   0.6    19    27   54214    (-,-) 
+  rem_15_31_g117275/Y   -       A1->Y   R     OA21X1         1   0.6    36   118   54332    (-,-) 
+  rem_15_31_g117265/Y   -       B0->Y   R     AO21X2         4   6.0    80   104   54436    (-,-) 
+  rem_15_31_g117242/CO  -       CI->CO  R     ADDFXL         1   1.8    86   210   54645    (-,-) 
+  rem_15_31_g117239/CO  -       CI->CO  R     ADDFXL         1   1.8    88   211   54856    (-,-) 
+  rem_15_31_g117236/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   55068    (-,-) 
+  rem_15_31_g117233/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   55280    (-,-) 
+  rem_15_31_g117230/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   55493    (-,-) 
+  rem_15_31_g117227/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   55705    (-,-) 
+  rem_15_31_g117224/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   55917    (-,-) 
+  rem_15_31_g117221/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   56129    (-,-) 
+  rem_15_31_g117218/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   56341    (-,-) 
+  rem_15_31_g117215/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   56553    (-,-) 
+  rem_15_31_g117213/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   56765    (-,-) 
+  rem_15_31_g117210/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   56977    (-,-) 
+  rem_15_31_g117207/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   57189    (-,-) 
+  rem_15_31_g117204/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   57402    (-,-) 
+  rem_15_31_g117201/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   57614    (-,-) 
+  rem_15_31_g117198/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   57826    (-,-) 
+  rem_15_31_g117195/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   58038    (-,-) 
+  rem_15_31_g117192/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   58250    (-,-) 
+  rem_15_31_g117189/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   58462    (-,-) 
+  rem_15_31_g117186/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   58674    (-,-) 
+  rem_15_31_g117183/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   58886    (-,-) 
+  rem_15_31_g117180/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   59098    (-,-) 
+  rem_15_31_g117177/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   59310    (-,-) 
+  rem_15_31_g117174/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   59522    (-,-) 
+  rem_15_31_g117170/CO  -       CI->CO  R     ADDFXL         1   1.8    88   212   59735    (-,-) 
+  rem_15_31_g117167/CO  -       CI->CO  R     ADDFXL         1   1.3    76   206   59940    (-,-) 
+  rem_15_31_g117163/CON -       CI->CON F     ACHCONX2       1   1.3   132    85   60026    (-,-) 
+  rem_15_31_g117161/CON -       CI->CON R     ACHCONX2       1   0.6   142    84   60109    (-,-) 
+  rem_15_31_g117156/Y   -       C->Y    R     AND3X2        28  16.8   173   298   60407    (-,-) 
+  rem_15_31_g117153/Y   -       C->Y    R     OR3X2          3   4.3    54   154   60562    (-,-) 
+  rem_15_31_g117144/Y   -       B->Y    R     AND2X1         2   1.6    47   123   60684    (-,-) 
+  rem_15_31_g119294/Y   -       A1N->Y  R     OAI2BB1X4      1   0.6    46   136   60820    (-,-) 
+  rem_15_31_g117057/Y   -       B0->Y   R     OA21X2         2   2.1    52   153   60974    (-,-) 
+  rem_15_31_g117056/Y   -       A->Y    F     INVX2          3   5.4    55    49   61023    (-,-) 
+  rem_15_31_g117049/CO  -       CI->CO  F     ADDFXL         1   1.8   101   196   61219    (-,-) 
+  rem_15_31_g117043/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   61430    (-,-) 
+  rem_15_31_g117037/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   61641    (-,-) 
+  rem_15_31_g117031/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   61853    (-,-) 
+  rem_15_31_g117025/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   62064    (-,-) 
+  rem_15_31_g117019/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   62275    (-,-) 
+  rem_15_31_g117013/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   62486    (-,-) 
+  rem_15_31_g117007/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   62698    (-,-) 
+  rem_15_31_g117001/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   62909    (-,-) 
+  rem_15_31_g116995/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   63120    (-,-) 
+  rem_15_31_g116989/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   63332    (-,-) 
+  rem_15_31_g116983/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   63543    (-,-) 
+  rem_15_31_g116977/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   63754    (-,-) 
+  rem_15_31_g116971/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   63966    (-,-) 
+  rem_15_31_g116965/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   64177    (-,-) 
+  rem_15_31_g116959/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   64388    (-,-) 
+  rem_15_31_g116953/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   64600    (-,-) 
+  rem_15_31_g116947/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   64811    (-,-) 
+  rem_15_31_g116941/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   65022    (-,-) 
+  rem_15_31_g116935/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   65233    (-,-) 
+  rem_15_31_g116929/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   65445    (-,-) 
+  rem_15_31_g116923/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   65656    (-,-) 
+  rem_15_31_g116917/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   65867    (-,-) 
+  rem_15_31_g116911/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   66079    (-,-) 
+  rem_15_31_g116905/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   66290    (-,-) 
+  rem_15_31_g116901/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   66501    (-,-) 
+  rem_15_31_g116893/CO  -       CI->CO  F     ADDFXL         1   1.8   101   211   66712    (-,-) 
+  rem_15_31_g116886/CO  -       CI->CO  F     ADDFXL         2   1.9   104   213   66925    (-,-) 
+  rem_15_31_g116885/Y   -       A->Y    R     INVX1          1   0.6    25    50   66975    (-,-) 
+  rem_15_31_g116883/Y   -       C0->Y   F     AOI211XL       1   0.6   117    34   67008    (-,-) 
+  rem_15_31_g116880/Y   -       C0->Y   R     AOI211XL       2   6.0   541   316   67324    (-,-) 
+  rem_15_31_g116874/Y   -       A->Y    R     OR2X2         31  18.6   156   339   67663    (-,-) 
+  rem_15_31_g116860/Y   -       B1->Y   R     OA22X1         1   0.7    40   168   67831    (-,-) 
+  rem_15_31_g116836/Y   -       C0->Y   F     OAI221XL       1   0.8   216   140   67972    (-,-) 
+  g38578/Y              -       A->Y    R     INVX1          1   0.6    47    91   68062    (-,-) 
+  g38042__9682/Y        -       B1->Y   R     OA22X1         1   0.7    41   131   68193    (-,-) 
+  g37960__6877/Y        -       C0->Y   F     OAI221XL       1   0.6   200   131   68325    (-,-) 
+  g37924__3772/Y        -       C0->Y   R     AOI211XL       1   0.6   134   127   68452    (-,-) 
+  g37906__8757/Y        -       C0->Y   F     OAI211XL       1   0.6   162   138   68589    (-,-) 
+  g37893__4296/Y        -       C0->Y   R     AOI211XL       1   0.6   132   115   68704    (-,-) 
+  g37876__8757/Y        -       C0->Y   F     OAI211XL       1   0.6   164   137   68841    (-,-) 
+  result_reg[1]/D       -       -       F     TLATX4         1     -     -     0   68841    (-,-) 
+#-------------------------------------------------------------------------------------------------
+
+@genus:root: 12> report_gate
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution 17.22-s017_1
+  Generated on:           Nov 24 2023  04:04:56 pm
+  Module:                 alu
+  Operating conditions:   slow (balanced_tree)
+  Wireload mode:          enclosed
+  Area mode:              timing library
+============================================================
+
+                            
+   Gate    Instances  Area     Library   
+-----------------------------------------
+ACHCONX2         457  0.000    gpdk045bc 
+ADDFX4            21  0.000    gpdk045bc 
+ADDFXL          2382  0.000    gpdk045bc 
+ADDHX1             8  0.000    gpdk045bc 
+AND2X1           460  0.000    gpdk045bc 
+AND2X2           101  0.000    gpdk045bc 
+AND3X1            61  0.000    gpdk045bc 
+AND3X2            23  0.000    gpdk045bc 
+AND4X1             4  0.000    gpdk045bc 
+AND4XL             4  0.000    gpdk045bc 
+AO21X1           106  0.000    gpdk045bc 
+AO21X2           168  0.000    gpdk045bc 
+AO21X4             6  0.000    gpdk045bc 
+AO22X1            55  0.000    gpdk045bc 
+AO22X2           184  0.000    gpdk045bc 
+AO22XL           446  0.000    gpdk045bc 
+AOI211XL          80  0.000    gpdk045bc 
+AOI21X4            1  0.000    gpdk045bc 
+AOI221X1          22  0.000    gpdk045bc 
+AOI221X4           6  0.000    gpdk045bc 
+AOI221XL         458  0.000    gpdk045bc 
+AOI222X1           4  0.000    gpdk045bc 
+AOI222XL          12  0.000    gpdk045bc 
+AOI22X4            2  0.000    gpdk045bc 
+AOI2BB1X4          7  0.000    gpdk045bc 
+AOI31X1           10  0.000    gpdk045bc 
+AOI31XL           10  0.000    gpdk045bc 
+AOI32XL           60  0.000    gpdk045bc 
+AOI33XL            4  0.000    gpdk045bc 
+BMXIX2             4  0.000    gpdk045bc 
+INVX1           1938  0.000    gpdk045bc 
+INVX12            25  0.000    gpdk045bc 
+INVX16            11  0.000    gpdk045bc 
+INVX2            414  0.000    gpdk045bc 
+INVX20            46  0.000    gpdk045bc 
+INVX3            253  0.000    gpdk045bc 
+INVX4            194  0.000    gpdk045bc 
+INVX6            190  0.000    gpdk045bc 
+INVX8            143  0.000    gpdk045bc 
+NAND2BX4         123  0.000    gpdk045bc 
+NAND2X8            9  0.000    gpdk045bc 
+NAND3BX4           2  0.000    gpdk045bc 
+NAND3X8            2  0.000    gpdk045bc 
+NOR2BX4           65  0.000    gpdk045bc 
+NOR2X8            10  0.000    gpdk045bc 
+NOR3BX4            4  0.000    gpdk045bc 
+NOR3X8             2  0.000    gpdk045bc 
+OA21X1           102  0.000    gpdk045bc 
+OA21X2            87  0.000    gpdk045bc 
+OA21X4             4  0.000    gpdk045bc 
+OA22X1           592  0.000    gpdk045bc 
+OA22X2            70  0.000    gpdk045bc 
+OAI211XL          56  0.000    gpdk045bc 
+OAI21X4            4  0.000    gpdk045bc 
+OAI221X1           3  0.000    gpdk045bc 
+OAI221X2           2  0.000    gpdk045bc 
+OAI221X4           6  0.000    gpdk045bc 
+OAI221XL         559  0.000    gpdk045bc 
+OAI222X1           2  0.000    gpdk045bc 
+OAI222XL          53  0.000    gpdk045bc 
+OAI2BB1X4         37  0.000    gpdk045bc 
+OAI31X1            4  0.000    gpdk045bc 
+OAI31XL           26  0.000    gpdk045bc 
+OAI32XL           19  0.000    gpdk045bc 
+OR2X1            391  0.000    gpdk045bc 
+OR2X2            111  0.000    gpdk045bc 
+OR3X1             69  0.000    gpdk045bc 
+OR3X2             13  0.000    gpdk045bc 
+OR4X1             12  0.000    gpdk045bc 
+OR4XL             52  0.000    gpdk045bc 
+TBUFXL            32  0.000    gpdk045bc 
+TLATX4            33  0.000    gpdk045bc 
+XNOR2X1           75  0.000    gpdk045bc 
+XNOR2X2          271  0.000    gpdk045bc 
+XNOR3X1          336  0.000    gpdk045bc 
+XOR2X4            72  0.000    gpdk045bc 
+XOR3XL           143  0.000    gpdk045bc 
+-----------------------------------------
+total          11833  0.000              
+
+
+*INFO : Above table contains 77 Lib-Cell having zero area.
+
+
+                                      
+     Type      Instances  Area Area % 
+--------------------------------------
+sequential            33 0.000    0.0 
+inverter            3214 0.000    0.0 
+tristate              32 0.000    0.0 
+logic               8554 0.000    0.0 
+physical_cells         0 0.000    0.0 
+--------------------------------------
+total              11833 0.000    0.0 
+
+@genus:root: 13> report_power
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution 17.22-s017_1
+  Generated on:           Nov 24 2023  04:05:56 pm
+  Module:                 alu
+  Operating conditions:   slow (balanced_tree)
+  Wireload mode:          enclosed
+  Area mode:              timing library
+============================================================
+
+                Leakage    Dynamic      Total    
+Instance Cells Power(nW)  Power(nW)   Power(nW)  
+-------------------------------------------------
+alu      11833  1617.737 3151088.808 3152706.544 
+
+@genus:root: 14> exit
+Normal exit.
